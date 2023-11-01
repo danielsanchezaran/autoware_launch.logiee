@@ -22,7 +22,7 @@
       use_hatched_road_markings: true
 
       # for debug
-      publish_debug_marker: false
+      publish_debug_marker: true
       print_debug_info: false
 
       # avoidance is performed for the object type with true
@@ -120,7 +120,7 @@
         # detection range
         object_check_forward_distance: 150.0            # [m]
         object_check_backward_distance: 10.0            # [m]
-        object_check_goal_distance: 20.0                # [m]
+        object_check_goal_distance: 0.0                # [m]
         # filtering parking objects
         threshold_distance_object_is_on_center: 1.0     # [m]
         object_check_shiftable_ratio: 0.6               # [-]
@@ -173,7 +173,7 @@
         # avoidance distance parameters
         longitudinal:
           prepare_time: 2.0                             # [s]
-          remain_buffer_distance: 30.0                  # [m]
+          remain_buffer_distance: 0.0                  # [m]
           min_prepare_distance: 1.0                     # [m]
           min_slow_down_speed: 1.38                     # [m/s]
           buf_slow_down_speed: 0.56                     # [m/s]
@@ -210,7 +210,7 @@
           velocity: [1.0, 1.38, 11.1]                   # [m/s]
           max_accel_values: [0.5, 0.5, 0.5]             # [m/ss]
           min_jerk_values: [0.2, 0.2, 0.2]              # [m/sss]
-          max_jerk_values: [1.0, 1.0, 1.0]              # [m/sss]
+          max_jerk_values: [10.0, 10.0, 10.0]              # [m/sss]
 
         # longitudinal constraints
         longitudinal:
